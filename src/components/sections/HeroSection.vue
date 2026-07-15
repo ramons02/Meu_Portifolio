@@ -39,7 +39,7 @@ const resumePreviewUrl = `${import.meta.env.BASE_URL}curriculo-online.html`;
           </div>
           
           <p class="text-slate-400 text-lg md:text-xl mb-10 max-w-2xl font-light leading-relaxed">
-            Estudante do 3º período de Análise e Desenvolvimento de Sistemas (ADS). Com 2 anos de experiência como Network Infrastructure & Support Analyst, agora focado em construir a carreira como Desenvolvedor Full-Stack.
+            Estudante do 4º período de Análise e Desenvolvimento de Sistemas (ADS). Com 2 anos de experiência como Network Infrastructure & Support Analyst, agora focado em construir a carreira como Desenvolvedor Full-Stack.
           </p>
           
           <div class="flex flex-col sm:flex-row flex-wrap items-center gap-4 justify-center lg:justify-start">

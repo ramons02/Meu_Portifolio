@@ -42,7 +42,7 @@ const skillCategories = ref<SkillCategory[]>([
           <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">Sobre</h2>
           <div class="space-y-4 text-slate-400 leading-relaxed font-light text-lg mb-8">
             <p>
-              Sou discente do 3º período de Análise e Desenvolvimento de Sistemas (ADS), com foco no desenvolvimento de software e no aprimoramento contínuo das minhas habilidades técnicas.
+              Sou discente do 4º período de Análise e Desenvolvimento de Sistemas (ADS), com foco no desenvolvimento de software e no aprimoramento contínuo das minhas habilidades técnicas.
             </p>
             <p>
               Apaixonado por tecnologia, busco desenvolver soluções escaláveis, eficientes e de alta qualidade, aplicando boas práticas de engenharia de software, como SOLID, Clean Code e Clean Architecture. Também utilizo ferramentas modernas, incluindo Inteligência Artificial Generativa, para aumentar a produtividade e criar soluções mais inovadoras.
