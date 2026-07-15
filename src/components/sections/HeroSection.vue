@@ -22,7 +22,7 @@ const resumePreviewUrl = `${import.meta.env.BASE_URL}curriculo-online.html`;
           </div>
           
           <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-            Estudante de <br />
+            Discente de <br />
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-teal-400">
               Análise e Desenvolvimento de Sistemas
             </span>
