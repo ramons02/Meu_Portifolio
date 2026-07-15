@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Ramon Silva</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
+        
+        /* Estilos simulando uma folha A4 */
+        .page {
+            max-width: 21cm;
+            min-height: 29.7cm;
+            margin: 2cm auto;
+            background: white;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            padding: 2cm;
+            border-radius: 4px;
+        }
+
+        /* Configurações exclusivas para o momento da impressão (PDF) */
+        @media print {
+            body { background: white; margin: 0; padding: 0; }
+            .page { margin: 0; box-shadow: none; padding: 1.5cm; max-width: 100%; border-radius: 0; }
+            .no-print { display: none !important; }
+            /* Ocultar cabeçalhos e rodapés do navegador */
+            @page { margin: 0; }
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+    
+    <!-- Botão de Imprimir (Some na hora da impressão) -->
+    <div class="fixed top-6 right-6 no-print">
+        <button onclick="window.print()" class="bg-indigo-600 text-white px-5 py-3 rounded-xl shadow-lg hover:bg-indigo-700 font-semibold flex items-center gap-2 transition-all hover:scale-105">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+            </svg>
+            Gerar PDF
+        </button>
+    </div>
+
+    <!-- O Currículo em si -->
+    <div class="page">
+        <!-- Cabeçalho -->
+        <header class="flex items-center gap-6 border-b-2 border-slate-200 pb-6 mb-6">
+            <img src="./profile.jpg" alt="Ramon Silva" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-md">
+            <div>
+                <h1 class="text-4xl font-bold text-slate-900 tracking-tight">Ramon Silva</h1>
+                <h2 class="text-xl text-indigo-600 font-medium mt-1">Estudante de ADS & Support Analyst</h2>
+                <div class="flex flex-wrap gap-x-5 gap-y-2 mt-3 text-sm text-slate-600">
+                    <span class="flex items-center gap-1.5 font-medium">📞 (94) 99177-7860</span>
+                    <span class="flex items-center gap-1.5 font-medium">💼 linkedin.com/in/ramonsillva</span>
+                    <span class="flex items-center gap-1.5 font-medium">💻 github.com/ramons02</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Resumo -->
+        <section class="mb-6">
+            <h3 class="text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-3 uppercase tracking-wider">Resumo Profissional</h3>
+            <p class="text-slate-700 leading-relaxed text-sm text-justify">
+                Estudante do 3º período de Análise e Desenvolvimento de Sistemas (ADS), com foco em desenvolvimento de software e na construção de soluções escaláveis, eficientes e de alta qualidade. Atualmente, atuo como Network Infrastructure & Support Analyst, acumulando 2 anos de experiência na integração entre Infraestrutura e Desenvolvimento, o que me proporciona uma visão abrangente do ciclo de vida das aplicações. Tenho interesse em aplicar boas práticas de engenharia de software, como SOLID, Clean Code e Clean Architecture, aliadas ao uso de ferramentas modernas, incluindo Inteligência Artificial Generativa, e tecnologias do ecossistema Java, como Spring e Angular, para desenvolver sistemas robustos, seguros e orientados às necessidades do negócio.
+            </p>
+        </section>
+
+        <!-- Experiência -->
+        <section class="mb-6">
+            <h3 class="text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-3 uppercase tracking-wider">Experiência Profissional</h3>
+            <div class="mb-4">
+                <div class="flex justify-between items-baseline">
+                    <h4 class="text-md font-bold text-slate-800">Network Infrastructure & Support Analyst</h4>
+                    <span class="text-sm font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">Há 2 anos (Atual)</span>
+                </div>
+                <p class="text-sm text-slate-700 mt-2 leading-relaxed">
+                    Atuação estratégica na interface entre equipes de Infraestrutura e Desenvolvimento. Experiência robusta em diagnóstico técnico, resolução de incidentes sistêmicos (troubleshooting avançado) e otimização contínua de fluxos operacionais, garantindo estabilidade e comunicação assertiva entre áreas técnicas.
+                </p>
+            </div>
+        </section>
+
+        <!-- Habilidades Técnicas -->
+        <section class="mb-6">
+            <h3 class="text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-3 uppercase tracking-wider">Habilidades Técnicas</h3>
+            <div class="grid grid-cols-2 gap-4 text-sm bg-slate-50 p-4 rounded-lg">
+                <div>
+                    <h4 class="font-bold text-indigo-700 mb-1">Backend & APIs</h4>
+                    <ul class="list-disc list-inside text-slate-700 space-y-1">
+                        <li><span class="font-medium text-slate-800">Java</span> (Intermediário) & Spring Boot</li>
+                        <li>Node.js</li>
+                        <li>REST APIs</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-indigo-700 mb-1">Frontend</h4>
+                    <ul class="list-disc list-inside text-slate-700 space-y-1">
+                        <li><span class="font-medium text-slate-800">Angular</span></li>
+                        <li>React & Vue 3</li>
+                        <li>TypeScript & Tailwind CSS</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-indigo-700 mb-1">Banco de Dados</h4>
+                    <ul class="list-disc list-inside text-slate-700 space-y-1">
+                        <li><span class="font-medium text-slate-800">PostgreSQL</span></li>
+                        <li>Modelagem Relacional</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-indigo-700 mb-1">Engenharia & IA</h4>
+                    <ul class="list-disc list-inside text-slate-700 space-y-1">
+                        <li>Programação Assistida por IA (Claude Code)</li>
+                        <li>Git, GitHub & Docker</li>
+                        <li>Princípios SOLID & Clean Architecture</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projetos Relevantes -->
+        <section class="mb-6">
+            <h3 class="text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-3 uppercase tracking-wider">Projetos Relevantes</h3>
+            
+            <div class="mb-4">
+                <h4 class="text-md font-bold text-slate-800 flex items-center gap-2">
+                    Avcar
+                    <span class="text-[10px] font-bold bg-slate-200 px-2 py-0.5 rounded text-slate-600">PROJETO PESSOAL</span>
+                </h4>
+                <p class="text-sm text-slate-700 mt-1">Sistema de gestão de frota automotiva focado em performance. Implementação de arquitetura robusta com injeção de dependências no Spring Boot e interfaces reativas no Angular.</p>
+                <p class="text-xs text-indigo-600 font-medium mt-1">Tech Stack: Java, Spring Boot, Angular, PostgreSQL</p>
+            </div>
+
+            <div class="mb-4">
+                <h4 class="text-md font-bold text-slate-800 flex items-center gap-2">
+                    Hupsteste
+                    <span class="text-[10px] font-bold bg-slate-200 px-2 py-0.5 rounded text-slate-600">PROJETO PESSOAL</span>
+                </h4>
+                <p class="text-sm text-slate-700 mt-1">Plataforma para execução e monitoramento de rotinas de testes. Aplicação de princípios SOLID e Clean Code para assegurar resiliência nas rotas e controle de concorrência sistêmica.</p>
+                <p class="text-xs text-indigo-600 font-medium mt-1">Tech Stack: Java, Spring Boot, Angular, PostgreSQL</p>
+            </div>
+
+            <div class="mb-4">
+                <h4 class="text-md font-bold text-slate-800 flex items-center gap-2">
+                    Clínica Fisio
+                    <span class="text-[10px] font-bold bg-slate-200 px-2 py-0.5 rounded text-slate-600">PROJETO PESSOAL</span>
+                </h4>
+                <p class="text-sm text-slate-700 mt-1">Software de agendamento clínico e prontuário. Desenvolvimento full-stack garantindo a integridade de rotas restritas e modelagem relacional avançada para consultas.</p>
+                <p class="text-xs text-indigo-600 font-medium mt-1">Tech Stack: Java, Spring Boot, Angular, PostgreSQL</p>
+            </div>
+        </section>
+
+        <!-- Formação Acadêmica -->
+        <section>
+            <h3 class="text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-3 uppercase tracking-wider">Formação Acadêmica</h3>
+            <div class="flex justify-between items-baseline">
+                <h4 class="text-md font-bold text-slate-800">Análise e Desenvolvimento de Sistemas (ADS)</h4>
+                <span class="text-sm text-slate-600 font-medium bg-slate-100 px-2 py-0.5 rounded">Cursando (3º Período)</span>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
