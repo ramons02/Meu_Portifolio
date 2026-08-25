@@ -26,11 +26,12 @@ const projects = ref<Project[]>([
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <ProjectCard 
-          v-for="project in projects" 
-          :key="project.id" 
-          :project="project" 
+      <div class="flex flex-wrap justify-center gap-8">
+        <ProjectCard
+          v-for="project in projects"
+          :key="project.id"
+          :project="project"
+          class="w-full sm:w-[380px]"
         />
       </div>
     </div>
