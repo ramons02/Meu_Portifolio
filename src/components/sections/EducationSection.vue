@@ -1,20 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-// TODO: preencher com o nome real da instituição e a previsão de conclusão.
 const education = ref({
-  institution: '[Nome da instituição]',
   course: 'Análise e Desenvolvimento de Sistemas (ADS)',
   status: 'Cursando — 4º período',
-  expectedCompletion: '[Previsão de conclusão]'
+  period: '02/2025 — 12/2027'
 });
-
-// TODO: substituir pela lista real de cursos/plataformas usados (documentação oficial, YouTube, Alura, etc).
-const complementaryStudies = ref<string[]>([
-  '[Curso/plataforma — ex: Documentação oficial]',
-  '[Curso/plataforma — ex: YouTube]',
-  '[Curso/plataforma — ex: Alura]'
-]);
 </script>
 
 <template>
@@ -29,22 +20,7 @@ const complementaryStudies = ref<string[]>([
             {{ education.status }}
           </span>
         </div>
-        <p class="text-slate-400 font-light">{{ education.institution }}</p>
-        <p class="text-slate-500 text-sm mt-1">Previsão de conclusão: {{ education.expectedCompletion }}</p>
-
-        <!-- Estudos complementares -->
-        <div class="mt-8 pt-8 border-t border-white/5">
-          <h4 class="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-4">Estudos complementares</h4>
-          <div class="flex flex-wrap gap-2">
-            <span
-              v-for="study in complementaryStudies"
-              :key="study"
-              class="text-sm font-medium px-3 py-1.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700"
-            >
-              {{ study }}
-            </span>
-          </div>
-        </div>
+        <p class="text-slate-400 font-light">{{ education.period }}</p>
       </div>
     </div>
   </section>
