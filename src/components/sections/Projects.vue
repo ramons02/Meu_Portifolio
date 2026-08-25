@@ -8,6 +8,7 @@ const projects = ref<Project[]>([
     id: 1,
     title: 'FisioClinic',
     description: 'Sistema full-stack de gestão para clínica de fisioterapia. Autenticação com controle de acesso, cadastro e acompanhamento de pacientes, gestão de sessões e agenda. API REST robusta com Spring Boot e interface reativa em Angular.',
+    imageUrl: '/fisioclinic.png',
     technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL'],
     githubUrl: 'https://github.com/ramons02/Clinica_fisio.back',
     demoUrl: 'https://fisioapp-nu.vercel.app/'
