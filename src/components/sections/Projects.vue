@@ -7,10 +7,9 @@ const projects = ref<Project[]>([
   {
     id: 1,
     title: 'FisioClinic',
-    // TODO: inserir métricas reais (nº de entidades, nº de endpoints REST, testes automatizados/cobertura, JWT?, tempo de desenvolvimento)
-    description: 'Sistema full-stack de gestão para clínica de fisioterapia, com autenticação e controle de acesso, cadastro e acompanhamento de pacientes, e gestão de sessões e agenda. [TODO: nº de entidades no banco] entidades modeladas, [TODO: nº de endpoints] endpoints REST. [TODO: testes automatizados — framework e cobertura aproximada]. [TODO: autenticação/autorização, ex. JWT]. Desenvolvido em [TODO: tempo aproximado].',
+    description: 'Sistema completo de gestão para clínicas de fisioterapia e pilates: cadastro de pacientes e profissionais, planos mensais, agenda de sessões, evolução clínica, faturamento e dashboard financeiro. Arquitetura com 10 entidades e 14 regras de negócio documentadas. Autenticação JWT + BCrypt com controle de acesso por perfil (RBAC — Admin, Recepcionista, Fisioterapeuta). 74 tarefas concluídas ao longo de 6 fases de implementação.',
     imageUrl: '/fisioclinic.png',
-    technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL'],
+    technologies: ['Java 21', 'Spring Boot 3.3', 'React', 'PostgreSQL'],
     githubUrl: 'https://github.com/ramons02/Clinica_fisio.back',
     demoUrl: 'https://fisioapp-nu.vercel.app/'
   }
