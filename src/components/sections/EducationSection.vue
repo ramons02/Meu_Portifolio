@@ -3,6 +3,7 @@ import { ref } from 'vue';
 
 const education = ref({
   course: 'Análise e Desenvolvimento de Sistemas (ADS)',
+  institution: 'Faculdade SENAI FATESG',
   status: 'Cursando — 4º período',
   period: '02/2025 — 12/2027'
 });
@@ -20,7 +21,8 @@ const education = ref({
             {{ education.status }}
           </span>
         </div>
-        <p class="text-slate-400 font-light">{{ education.period }}</p>
+        <p class="text-slate-400 font-light">{{ education.institution }}</p>
+        <p class="text-slate-500 text-sm mt-1">{{ education.period }}</p>
       </div>
     </div>
   </section>
