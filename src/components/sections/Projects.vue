@@ -6,24 +6,11 @@ import ProjectCard from '../common/ProjectCard.vue';
 const projects = ref<Project[]>([
   {
     id: 1,
-    title: 'Avcar',
-    description: 'Sistema de gestão de frota automotiva focado em performance. Implementação de arquitetura baseada em microsserviços simulados, injeção de dependências robusta com Spring Boot e interfaces interativas e reativas com Angular.',
+    title: 'FisioClinic',
+    description: 'Sistema full-stack de gestão para clínica de fisioterapia. Autenticação com controle de acesso, cadastro e acompanhamento de pacientes, gestão de sessões e agenda. API REST robusta com Spring Boot e interface reativa em Angular.',
     technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL'],
-    githubUrl: 'https://github.com/ramons02/av_car'
-  },
-  {
-    id: 2,
-    title: 'Hupsteste',
-    description: 'Plataforma para execução e monitoramento de rotinas de testes. Aplicação de princípios SOLID e Clean Code para assegurar resiliência das rotas, com backend robusto integrado e controle de concorrência no banco de dados.',
-    technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL'],
-    githubUrl: 'https://github.com/ramons02/hupsteste_back'
-  },
-  {
-    id: 3,
-    title: 'Joelho Time',
-    description: 'Aplicativo para gerenciamento de tempo de reabilitação e exercícios de fisioterapia para joelhos. Desenvolvimento full-stack com foco em UX, controle de sessões, histórico de treinos e integração com relatórios técnicos.',
-    technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL'],
-    githubUrl: 'https://github.com/ramons02/JoelhoTimer'
+    githubUrl: 'https://github.com/ramons02/Clinica_fisio.back',
+    demoUrl: 'https://fisioapp-nu.vercel.app/'
   }
 ]);
 </script>
