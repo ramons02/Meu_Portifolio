@@ -7,6 +7,7 @@ const isMobileMenuOpen = ref(false);
 const navLinks = [
   { name: 'Início', href: '#hero' },
   { name: 'Sobre', href: '#about' },
+  { name: 'Formação', href: '#education' },
   { name: 'Projetos', href: '#projects' },
   { name: 'Contato', href: '#contact' }
 ];

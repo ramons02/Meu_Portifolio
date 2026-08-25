@@ -7,7 +7,8 @@ const projects = ref<Project[]>([
   {
     id: 1,
     title: 'FisioClinic',
-    description: 'Sistema full-stack de gestão para clínica de fisioterapia. Autenticação com controle de acesso, cadastro e acompanhamento de pacientes, gestão de sessões e agenda. API REST robusta com Spring Boot e interface reativa em Angular.',
+    // TODO: inserir métricas reais (nº de entidades, nº de endpoints REST, testes automatizados/cobertura, JWT?, tempo de desenvolvimento)
+    description: 'Sistema full-stack de gestão para clínica de fisioterapia, com autenticação e controle de acesso, cadastro e acompanhamento de pacientes, e gestão de sessões e agenda. [TODO: nº de entidades no banco] entidades modeladas, [TODO: nº de endpoints] endpoints REST. [TODO: testes automatizados — framework e cobertura aproximada]. [TODO: autenticação/autorização, ex. JWT]. Desenvolvido em [TODO: tempo aproximado].',
     imageUrl: '/fisioclinic.png',
     technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL'],
     githubUrl: 'https://github.com/ramons02/Clinica_fisio.back',

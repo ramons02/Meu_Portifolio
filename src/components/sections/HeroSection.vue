@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
 const resumePreviewUrl = `${import.meta.env.BASE_URL}curriculo-online.html`;
+const profileImageFailed = ref(false);
 </script>
 
 <template>
@@ -33,7 +36,16 @@ const resumePreviewUrl = `${import.meta.env.BASE_URL}curriculo-online.html`;
               <div class="absolute inset-0 border-2 border-slate-800 rounded-full animate-[spin_10s_linear_infinite]"></div>
               <div class="absolute inset-4 border-2 border-indigo-500/30 rounded-full border-t-indigo-500 animate-[spin_15s_linear_infinite_reverse]"></div>
               <div class="absolute inset-8 rounded-full bg-slate-800 overflow-hidden border border-white/10 flex items-center justify-center">
-                <img src="/profile.jpg" alt="Sua Foto de Perfil" class="w-full h-full object-cover" />
+                <img
+                  v-if="!profileImageFailed"
+                  src="/profile.jpg"
+                  alt="Ramon Silva"
+                  class="w-full h-full object-cover"
+                  @error="profileImageFailed = true"
+                />
+                <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                </svg>
               </div>
             </div>
           </div>
