@@ -13,20 +13,39 @@
         .page {
             max-width: 21cm;
             min-height: 29.7cm;
-            margin: 2cm auto;
+            margin: 1.5cm auto;
             background: white;
             box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            padding: 2cm;
+            padding: 1.2cm 1.5cm;
             border-radius: 4px;
+            box-sizing: border-box;
         }
 
         /* Configurações exclusivas para o momento da impressão (PDF) */
         @media print {
-            body { background: white; margin: 0; padding: 0; }
-            .page { margin: 0; box-shadow: none; padding: 1.5cm; max-width: 100%; border-radius: 0; }
+            @page {
+                size: A4 portrait;
+                margin: 0;
+            }
+            html, body {
+                background: white !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                height: 100vh;
+                overflow: hidden;
+            }
+            .page {
+                margin: 0 !important;
+                box-shadow: none !important;
+                padding: 1cm 1.2cm !important;
+                max-width: 100% !important;
+                width: 100% !important;
+                height: 100vh !important;
+                max-height: 29.7cm !important;
+                border-radius: 0 !important;
+                box-sizing: border-box !important;
+            }
             .no-print { display: none !important; }
-            /* Ocultar cabeçalhos e rodapés do navegador */
-            @page { margin: 0; }
         }
     </style>
 </head>
@@ -45,49 +64,49 @@
     <!-- O Currículo em si -->
     <div class="page">
         <!-- Cabeçalho -->
-        <header class="flex items-center gap-6 border-b-2 border-slate-200 pb-6 mb-6">
-            <img src="./profile.jpg" alt="Ramon Silva" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-md">
+        <header class="flex items-center gap-5 border-b-2 border-slate-200 pb-3.5 mb-3.5">
+            <img src="./profile.jpg" alt="Ramon Silva" class="w-24 h-24 rounded-full object-cover border-2 border-indigo-100 shadow-sm flex-shrink-0">
             <div>
-                <h1 class="text-4xl font-bold text-slate-900 tracking-tight">Ramon Silva</h1>
-                <h2 class="text-xl text-indigo-600 font-medium mt-1">Discente de ADS & Support Analyst</h2>
-                <div class="flex flex-wrap gap-x-5 gap-y-2 mt-3 text-sm text-slate-600">
-                    <span class="flex items-center gap-1.5 font-medium">✉️ ramonsillva70@gmail.com</span>
-                    <span class="flex items-center gap-1.5 font-medium">📞 (94) 99177-7860</span>
-                    <span class="flex items-center gap-1.5 font-medium">💼 linkedin.com/in/ramonsillva</span>
-                    <span class="flex items-center gap-1.5 font-medium">💻 github.com/ramons02</span>
+                <h1 class="text-3xl font-bold text-slate-900 tracking-tight">Ramon Silva</h1>
+                <h2 class="text-base text-indigo-600 font-semibold mt-0.5">Discente de ADS & Support Analyst</h2>
+                <div class="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs text-slate-600">
+                    <span class="flex items-center gap-1 font-medium">✉️ ramonsillva70@gmail.com</span>
+                    <span class="flex items-center gap-1 font-medium">📞 (94) 99177-7860</span>
+                    <span class="flex items-center gap-1 font-medium">💼 linkedin.com/in/ramonsillva</span>
+                    <span class="flex items-center gap-1 font-medium">💻 github.com/ramons02</span>
                 </div>
             </div>
         </header>
 
         <!-- Resumo -->
-        <section class="mb-6">
-            <h3 class="text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-3 uppercase tracking-wider">Resumo Profissional</h3>
-            <p class="text-slate-700 leading-relaxed text-sm text-justify">
+        <section class="mb-3.5">
+            <h3 class="text-sm font-bold text-slate-900 border-b border-slate-200 pb-1 mb-1.5 uppercase tracking-wider">Resumo Profissional</h3>
+            <p class="text-slate-700 leading-normal text-[13px] text-justify">
                 Discente do 4º período de Análise e Desenvolvimento de Sistemas (ADS), com foco em desenvolvimento de software e na construção de soluções escaláveis, eficientes e de alta qualidade. Atualmente, atuo como Network Infrastructure & Support Analyst, acumulando 2 anos de experiência na integração entre Infraestrutura e Desenvolvimento, o que me proporciona uma visão abrangente do ciclo de vida das aplicações. Tenho interesse em aplicar boas práticas de engenharia de software, como SOLID, Clean Code e Clean Architecture, aliadas ao uso de ferramentas modernas, incluindo Inteligência Artificial Generativa, e tecnologias do ecossistema Java, como Spring e Angular, para desenvolver sistemas robustos, seguros e orientados às necessidades do negócio.
             </p>
         </section>
 
         <!-- Experiência -->
-        <section class="mb-6">
-            <h3 class="text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-3 uppercase tracking-wider">Experiência Profissional</h3>
-            <div class="mb-4">
+        <section class="mb-3.5">
+            <h3 class="text-sm font-bold text-slate-900 border-b border-slate-200 pb-1 mb-1.5 uppercase tracking-wider">Experiência Profissional</h3>
+            <div>
                 <div class="flex justify-between items-baseline">
-                    <h4 class="text-md font-bold text-slate-800">Network Infrastructure & Support Analyst</h4>
-                    <span class="text-sm font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">Há 2 anos (Atual)</span>
+                    <h4 class="text-sm font-bold text-slate-800">Network Infrastructure & Support Analyst</h4>
+                    <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">Há 2 anos (Atual)</span>
                 </div>
-                <p class="text-sm text-slate-700 mt-2 leading-relaxed">
+                <p class="text-[13px] text-slate-700 mt-1 leading-normal">
                     Atuação estratégica na interface entre equipes de Infraestrutura e Desenvolvimento. Experiência robusta em diagnóstico técnico, resolução de incidentes sistêmicos (troubleshooting avançado) e otimização contínua de fluxos operacionais, garantindo estabilidade e comunicação assertiva entre áreas técnicas.
                 </p>
             </div>
         </section>
 
         <!-- Habilidades Técnicas -->
-        <section class="mb-6">
-            <h3 class="text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-3 uppercase tracking-wider">Habilidades Técnicas</h3>
-            <div class="grid grid-cols-2 gap-4 text-sm bg-slate-50 p-4 rounded-lg">
+        <section class="mb-3.5">
+            <h3 class="text-sm font-bold text-slate-900 border-b border-slate-200 pb-1 mb-1.5 uppercase tracking-wider">Habilidades Técnicas</h3>
+            <div class="grid grid-cols-2 gap-3 text-xs bg-slate-50 p-3 rounded-lg border border-slate-100">
                 <div>
                     <h4 class="font-bold text-indigo-700 mb-1">Backend & APIs</h4>
-                    <ul class="list-disc list-inside text-slate-700 space-y-1">
+                    <ul class="list-disc list-inside text-slate-700 space-y-0.5">
                         <li><span class="font-medium text-slate-800">Java</span> (Intermediário) & Spring Boot</li>
                         <li>Node.js</li>
                         <li>REST APIs</li>
@@ -95,7 +114,7 @@
                 </div>
                 <div>
                     <h4 class="font-bold text-indigo-700 mb-1">Frontend</h4>
-                    <ul class="list-disc list-inside text-slate-700 space-y-1">
+                    <ul class="list-disc list-inside text-slate-700 space-y-0.5">
                         <li><span class="font-medium text-slate-800">Angular</span></li>
                         <li>React & Vue 3</li>
                         <li>TypeScript & Tailwind CSS</li>
@@ -103,14 +122,14 @@
                 </div>
                 <div>
                     <h4 class="font-bold text-indigo-700 mb-1">Banco de Dados</h4>
-                    <ul class="list-disc list-inside text-slate-700 space-y-1">
+                    <ul class="list-disc list-inside text-slate-700 space-y-0.5">
                         <li><span class="font-medium text-slate-800">PostgreSQL</span></li>
                         <li>Modelagem Relacional</li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-bold text-indigo-700 mb-1">Engenharia & IA</h4>
-                    <ul class="list-disc list-inside text-slate-700 space-y-1">
+                    <ul class="list-disc list-inside text-slate-700 space-y-0.5">
                         <li>Programação Assistida por IA (Claude Code)</li>
                         <li>Git, GitHub & Docker</li>
                         <li>Princípios SOLID & Clean Architecture</li>
@@ -120,29 +139,30 @@
         </section>
 
         <!-- Projetos Relevantes -->
-        <section class="mb-6">
-            <h3 class="text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-3 uppercase tracking-wider">Projetos Relevantes</h3>
+        <section class="mb-3.5">
+            <h3 class="text-sm font-bold text-slate-900 border-b border-slate-200 pb-1 mb-1.5 uppercase tracking-wider">Projetos Relevantes</h3>
             
-            <div class="mb-4">
-                <h4 class="text-md font-bold text-slate-800 flex items-center gap-2">
+            <div>
+                <h4 class="text-sm font-bold text-slate-800 flex items-center gap-2">
                     FisioClinic
-                    <span class="text-[10px] font-bold bg-slate-200 px-2 py-0.5 rounded text-slate-600">PROJETO PESSOAL</span>
+                    <span class="text-[10px] font-bold bg-slate-200 px-1.5 py-0.5 rounded text-slate-600">PROJETO PESSOAL</span>
                 </h4>
-                <p class="text-sm text-slate-700 mt-1">Sistema completo de gestão para clínicas de fisioterapia: pacientes, planos, agenda, evolução clínica e faturamento com dashboard financeiro. 10 entidades e 14 regras de negócio modeladas. Autenticação JWT + BCrypt com RBAC (3 perfis). 74 tarefas concluídas em 6 fases.</p>
+                <p class="text-[13px] text-slate-700 mt-1 leading-normal">Sistema completo de gestão para clínicas de fisioterapia: pacientes, planos, agenda, evolução clínica e faturamento com dashboard financeiro. 10 entidades e 14 regras de negócio modeladas. Autenticação JWT + BCrypt com RBAC (3 perfis). 74 tarefas concluídas em 6 fases.</p>
                 <p class="text-xs text-indigo-600 font-medium mt-1">Tech Stack: Java 21, Spring Boot 3.3, React, PostgreSQL</p>
             </div>
         </section>
 
         <!-- Formação Acadêmica -->
         <section>
-            <h3 class="text-lg font-bold text-slate-900 border-b border-slate-200 pb-1 mb-3 uppercase tracking-wider">Formação Acadêmica</h3>
+            <h3 class="text-sm font-bold text-slate-900 border-b border-slate-200 pb-1 mb-1.5 uppercase tracking-wider">Formação Acadêmica</h3>
             <div class="flex justify-between items-baseline">
-                <h4 class="text-md font-bold text-slate-800">Análise e Desenvolvimento de Sistemas (ADS)</h4>
-                <span class="text-sm text-slate-600 font-medium bg-slate-100 px-2 py-0.5 rounded">Cursando (4º Período)</span>
+                <h4 class="text-sm font-bold text-slate-800">Análise e Desenvolvimento de Sistemas (ADS)</h4>
+                <span class="text-xs text-slate-600 font-medium bg-slate-100 px-2 py-0.5 rounded">Cursando (4º Período)</span>
             </div>
-            <p class="text-sm text-slate-700 mt-1">Faculdade SENAI FATESG · 02/2025 — 12/2027</p>
+            <p class="text-xs text-slate-700 mt-1">Faculdade SENAI FATESG · 02/2025 — 12/2027</p>
         </section>
 
     </div>
 </body>
 </html>
+
