@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { defineAsyncComponent } from 'vue';
 import Navbar from './components/layout/Navbar.vue';
 import HeroSection from './components/sections/HeroSection.vue';
 import AboutSection from './components/sections/AboutSection.vue';
@@ -7,13 +8,18 @@ import SkillsSection from './components/sections/SkillsSection.vue';
 import Projects from './components/sections/Projects.vue';
 import Contact from './components/sections/Contact.vue';
 import Footer from './components/layout/Footer.vue';
+
+// Carregado sob demanda: Three.js/GSAP/Lenis pesam ~220KB gzip e não podem
+// bloquear o primeiro paint do conteúdo textual do portfólio.
+const Scene3D = defineAsyncComponent(() => import('./components/common/Scene3D.vue'));
 </script>
 
 <template>
   <div class="min-h-screen bg-slate-900 text-slate-50 font-sans selection:bg-indigo-500/30">
+    <Scene3D />
     <Navbar />
 
-    <main>
+    <main id="app-content" class="relative z-[2]">
       <HeroSection />
       <AboutSection />
       <EducationSection />
@@ -22,6 +28,6 @@ import Footer from './components/layout/Footer.vue';
       <Contact />
     </main>
 
-    <Footer />
+    <Footer class="relative z-[2]" />
   </div>
 </template>

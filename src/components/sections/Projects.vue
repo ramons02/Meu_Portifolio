@@ -19,7 +19,7 @@ const projects = ref<Project[]>([
 <template>
   <section id="projects" class="py-24">
     <div class="container mx-auto px-6 max-w-6xl">
-      <div class="text-center mb-16">
+      <div v-reveal3d class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">Projetos em Destaque</h2>
         <p class="text-slate-400 text-lg max-w-2xl mx-auto font-light">
           Uma seleção de projetos recentes que demonstram minhas habilidades técnicas e foco em experiência do usuário.
@@ -27,12 +27,14 @@ const projects = ref<Project[]>([
       </div>
 
       <div class="flex flex-wrap justify-center gap-8">
-        <ProjectCard
-          v-for="project in projects"
+        <div
+          v-for="(project, index) in projects"
           :key="project.id"
-          :project="project"
+          v-reveal3d="{ delay: index * 0.1 }"
           class="w-full sm:w-[380px]"
-        />
+        >
+          <ProjectCard :project="project" />
+        </div>
       </div>
     </div>
   </section>

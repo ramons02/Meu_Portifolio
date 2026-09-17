@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import TiltCard from '../common/TiltCard.vue';
+
 const contacts = [
   {
     name: 'E-mail',
@@ -37,19 +39,22 @@ const contacts = [
   <section id="contact" class="py-24 bg-slate-900/50">
     <div class="container mx-auto px-6 max-w-6xl">
       <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">Contato</h2>
-        <p class="text-slate-400 text-lg font-light mb-12">
+        <h2 v-reveal3d class="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">Contato</h2>
+        <p v-reveal3d="{ delay: 0.08 }" class="text-slate-400 text-lg font-light mb-12">
           Estou ativamente buscando oportunidades de estágio em desenvolvimento de software (presencial ou remoto). Sinta-se à vontade para entrar em contato comigo através das minhas redes ou telefone!
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <a 
-            v-for="contact in contacts" 
+        <div v-reveal3d="{ delay: 0.16 }" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <TiltCard
+            v-for="contact in contacts"
             :key="contact.name"
+            as="a"
             :href="contact.url"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center gap-4 p-6 bg-slate-950 border border-white/5 rounded-2xl hover:bg-slate-800 hover:-translate-y-1 transition-all duration-300 group"
+            :intensity="7"
+            glow-color="rgba(45, 212, 191, 0.14)"
+            class="flex items-center gap-4 p-6 bg-slate-950 border border-white/5 rounded-2xl hover:bg-slate-800 hover:border-teal-500/30 transition-colors duration-300 group"
           >
             <div class="flex items-center justify-center w-12 h-12 bg-indigo-500/10 text-indigo-400 rounded-full group-hover:bg-indigo-500 group-hover:text-white transition-colors" v-html="contact.icon">
             </div>
@@ -57,7 +62,7 @@ const contacts = [
               <h3 class="text-white font-medium">{{ contact.name }}</h3>
               <p class="text-slate-400 text-sm mt-1">{{ contact.value }}</p>
             </div>
-          </a>
+          </TiltCard>
         </div>
         
       </div>

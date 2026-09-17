@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Project } from '../../types';
+import TiltCard from './TiltCard.vue';
 
 defineProps<{
   project: Project;
@@ -7,7 +8,9 @@ defineProps<{
 </script>
 
 <template>
-  <div class="group flex flex-col rounded-2xl bg-white/5 border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm">
+  <TiltCard
+    class="group flex flex-col rounded-2xl bg-white/5 border border-white/10 overflow-hidden backdrop-blur-sm transition-[background-color,border-color,box-shadow] duration-300 hover:bg-white/10 hover:border-indigo-500/40 hover:shadow-2xl hover:shadow-indigo-950/50"
+  >
     <!-- Image Placeholder or Actual Image -->
     <div class="h-48 bg-slate-800 w-full overflow-hidden relative">
       <img 
@@ -64,5 +67,5 @@ defineProps<{
         </a>
       </div>
     </div>
-  </div>
+  </TiltCard>
 </template>

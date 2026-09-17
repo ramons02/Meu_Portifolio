@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import TiltCard from '../common/TiltCard.vue';
 
 const resumePreviewUrl = `${import.meta.env.BASE_URL}curriculo-online.html`;
 const profileImageFailed = ref(false);
@@ -32,7 +33,12 @@ const profileImageFailed = ref(false);
           </h1>
 
           <div class="flex justify-center lg:justify-start mb-10">
-            <div class="relative w-60 h-60 sm:w-72 sm:h-72 lg:w-80 lg:h-80">
+            <TiltCard
+              as="div"
+              :intensity="10"
+              glow-color="rgba(99, 102, 241, 0.28)"
+              class="w-60 h-60 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full"
+            >
               <div class="absolute inset-0 border-2 border-slate-800 rounded-full animate-[spin_10s_linear_infinite]"></div>
               <div class="absolute inset-4 border-2 border-indigo-500/30 rounded-full border-t-indigo-500 animate-[spin_15s_linear_infinite_reverse]"></div>
               <div class="absolute inset-8 rounded-full bg-slate-800 overflow-hidden border border-white/10 flex items-center justify-center">
@@ -47,7 +53,7 @@ const profileImageFailed = ref(false);
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                 </svg>
               </div>
-            </div>
+            </TiltCard>
           </div>
           
           <p class="text-slate-400 text-lg md:text-xl mb-10 max-w-2xl font-light leading-relaxed">

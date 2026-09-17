@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 html {
-  scroll-behavior: smooth;
+  /* Smooth scroll é feito pelo Lenis (Scene3D.vue) — scroll-behavior nativo
+     entraria em conflito com o raf dele. */
   font-family: 'Inter', sans-serif;
 }
 

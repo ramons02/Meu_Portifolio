@@ -35,10 +35,14 @@ const skillCategories = ref<SkillCategory[]>([
 <template>
   <section id="skills" class="py-24 bg-slate-900/50">
     <div class="container mx-auto px-6 max-w-4xl">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">Stack Principal</h2>
+      <h2 v-reveal3d class="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">Stack Principal</h2>
 
       <div class="space-y-8">
-        <div v-for="category in skillCategories" :key="category.title">
+        <div
+          v-for="(category, index) in skillCategories"
+          :key="category.title"
+          v-reveal3d="{ delay: index * 0.08 }"
+        >
           <h3 class="text-xl font-medium text-slate-200 mb-4 border-b border-white/10 pb-2">{{ category.title }}</h3>
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
             <div
