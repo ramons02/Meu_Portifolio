@@ -14,9 +14,7 @@ const certifications = ref([
     course: 'Manutenção de Computadores e Redes',
     institution: 'Elite Cursos e Treinamentos',
     hours: '60 horas-aula',
-    period: '06/11/2024 — 17/01/2025',
-    image: '/certificates/manutencao-computadores-redes.jpg',
-    verifyUrl: 'https://www.elitecursos.com.br'
+    period: '06/11/2024 — 17/01/2025'
   }
 ]);
 </script>
@@ -41,32 +39,17 @@ const certifications = ref([
         </TiltCard>
       </div>
 
-      <h3 v-reveal3d="{ delay: 0.15 }" class="text-xl font-medium text-white mt-14 mb-6">Certificações</h3>
+      <h2 v-reveal3d="{ delay: 0.15 }" class="text-3xl md:text-4xl font-bold text-white mt-16 mb-10 tracking-tight">Certificações</h2>
 
       <div
         v-for="(cert, index) in certifications"
         :key="cert.course"
         v-reveal3d="{ delay: 0.2 + index * 0.05 }"
       >
-        <TiltCard
-          as="a"
-          :href="cert.image"
-          target="_blank"
-          rel="noopener noreferrer"
-          :intensity="6"
-          class="flex flex-col sm:flex-row gap-5 bg-slate-800/50 border border-white/5 rounded-2xl p-6 transition-colors duration-300 hover:border-indigo-500/30"
-        >
-          <img
-            :src="cert.image"
-            :alt="`Certificado de ${cert.course}`"
-            class="w-full sm:w-40 h-28 object-cover rounded-lg border border-white/10 shrink-0"
-            loading="lazy"
-          />
-          <div class="min-w-0">
-            <h4 class="text-lg font-medium text-white">{{ cert.course }}</h4>
-            <p class="text-slate-400 font-light">{{ cert.institution }}</p>
-            <p class="text-slate-500 text-sm mt-1">{{ cert.period }} · {{ cert.hours }}</p>
-          </div>
+        <TiltCard as="div" :intensity="6" class="bg-slate-800/50 border border-white/5 rounded-2xl p-8 transition-colors duration-300 hover:border-indigo-500/30">
+          <h4 class="text-lg font-medium text-white">{{ cert.course }}</h4>
+          <p class="text-slate-400 font-light">{{ cert.institution }}</p>
+          <p class="text-slate-500 text-sm mt-1">{{ cert.period }} · {{ cert.hours }}</p>
         </TiltCard>
       </div>
     </div>

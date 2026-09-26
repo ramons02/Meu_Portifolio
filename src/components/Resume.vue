@@ -119,6 +119,16 @@ async function downloadPdf() {
         </div>
         <p class="text-xs text-slate-700 mt-1">Faculdade SENAI FATESG · 02/2025 — 12/2027</p>
       </section>
+
+      <!-- Certificações -->
+      <section class="mt-3.5">
+        <h3 class="text-sm font-bold text-slate-900 border-b border-slate-200 pb-1 mb-1.5 uppercase tracking-wider">Certificações</h3>
+        <div class="flex justify-between items-baseline">
+          <h4 class="text-sm font-bold text-slate-800">Manutenção de Computadores e Redes</h4>
+          <span class="text-xs text-slate-600 font-medium bg-slate-100 px-2 py-0.5 rounded">60 horas-aula</span>
+        </div>
+        <p class="text-xs text-slate-700 mt-1">Elite Cursos e Treinamentos · 06/11/2024 — 17/01/2025</p>
+      </section>
     </div>
 
     <!-- Botão de Download -->
