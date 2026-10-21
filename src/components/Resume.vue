@@ -83,7 +83,7 @@ async function downloadPdf() {
             <h4 class="font-bold text-indigo-700 mb-1">Banco de Dados Relacionais</h4>
             <ul class="list-disc list-inside text-slate-700 space-y-0.5">
               <li>MySQL</li>
-              <li>Modelagem de banco de dados</li>
+              <li>Modelagem de Banco de Dados</li>
             </ul>
           </div>
           <div>
