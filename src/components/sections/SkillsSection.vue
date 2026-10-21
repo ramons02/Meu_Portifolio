@@ -31,7 +31,6 @@ const skillCategories = ref<SkillCategory[]>([
     skills: [
       { name: 'Git & GitHub', level: 'Iniciante' },
       { name: 'Docker', level: 'Iniciante' },
-      { name: 'Claude Code', level: 'Iniciante' },
       { name: 'AI-Assisted Development', level: 'Iniciante' }
     ]
   }
