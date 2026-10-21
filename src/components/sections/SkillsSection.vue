@@ -9,8 +9,15 @@ const skillCategories = ref<SkillCategory[]>([
       { name: 'Java', level: 'Intermediário' },
       { name: 'Spring Boot', level: 'Iniciante' },
       { name: 'Node.js', level: 'Iniciante' },
-      { name: 'REST APIs', level: 'Iniciante' },
-      { name: 'PostgreSQL', level: 'Iniciante' }
+      { name: 'REST APIs', level: 'Iniciante' }
+    ]
+  },
+  {
+    title: 'Banco de Dados',
+    skills: [
+      { name: 'PostgreSQL', level: 'Iniciante' },
+      { name: 'MySQL', level: 'Iniciante' },
+      { name: 'Modelagem de banco de dados', level: 'Iniciante' }
     ]
   },
   {
