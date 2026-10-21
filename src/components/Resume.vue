@@ -80,9 +80,8 @@ async function downloadPdf() {
             </ul>
           </div>
           <div>
-            <h4 class="font-bold text-indigo-700 mb-1">Banco de Dados</h4>
+            <h4 class="font-bold text-indigo-700 mb-1">Banco de Dados Relacionais</h4>
             <ul class="list-disc list-inside text-slate-700 space-y-0.5">
-              <li><span class="font-medium text-slate-800">PostgreSQL</span></li>
               <li>MySQL</li>
               <li>Modelagem de banco de dados</li>
             </ul>

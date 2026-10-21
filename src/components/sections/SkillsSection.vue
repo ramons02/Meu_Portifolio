@@ -13,9 +13,8 @@ const skillCategories = ref<SkillCategory[]>([
     ]
   },
   {
-    title: 'Banco de Dados',
+    title: 'Banco de Dados Relacionais',
     skills: [
-      { name: 'PostgreSQL', level: 'Iniciante' },
       { name: 'MySQL', level: 'Iniciante' },
       { name: 'Modelagem de banco de dados', level: 'Iniciante' }
     ]
