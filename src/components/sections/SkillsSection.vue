@@ -32,7 +32,7 @@ const skillCategories = ref<SkillCategory[]>([
       { name: 'Git & GitHub', level: 'Iniciante' },
       { name: 'Docker', level: 'Iniciante' },
       { name: 'Claude Code', level: 'Iniciante' },
-      { name: 'IA & Prompting (LLMs, Tasks)', level: 'Iniciante' }
+      { name: 'AI-Assisted Development', level: 'Iniciante' }
     ]
   }
 ]);
