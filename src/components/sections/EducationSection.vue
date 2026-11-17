@@ -15,6 +15,12 @@ const certifications = ref([
     institution: 'Elite Cursos e Treinamentos',
     hours: '60 horas-aula',
     period: '06/11/2024 — 17/01/2025'
+  },
+  {
+    course: 'Fundamentos de Data Science e Inteligência Artificial',
+    institution: 'Data Science Academy',
+    hours: '24 horas',
+    period: 'Concluído em 17/11/2026'
   }
 ]);
 </script>
